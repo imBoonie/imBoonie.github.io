@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <title>Our House Evaluator</title>
+</head>
+  <body>
+    <nav id="myNav">
+      <ul id="navUl">
+        <li><a class="navLink" href="index.html">Home</a></li>
+        <li><a class="navLink" href="index.html">Projects</a></li>
+        <li><a class="navLink" href="index.html">Code</a></li>
+        <li><a class="navLink" href="index.html">Contact</a></li>
+      </ul>
+    </nav>
+<div id="desktopBg">
+  <img id="desktopLogo" src="Group.png" alt="House Logo">
+  <h1 id="desktopLogoText" class="logoText">Scorer</h1>
+</div>
+<section id="howToSection">  
+  <div class="howToTextBox" id="textBox1">
+      <div class="howToTextBox">
+        <h3 class="subHeaders">Preferences</h3>
+          <p class="guide">Choose your settings based on how important each room is to you</p>
+          <p class="guide">Press submit and you're ready to score a house</p>
+      </div>
+      <img class="gifs" src="preferences.gif" alt="preferences gif">
+  </div>
+      <div class="howToTextBox" id="textBox2">
+        <h3 class="subHeaders">Scoring</h3>
+          <p class="guide">Score each room</p>
+          <p class="guide">Press submit and then your report will be generated under the report heading</p> 
+      <img class="gifs" src="scoring.gif" alt="scoring gif">
+    </div>
+      <div class="howToTextBox" id="textBox3">
+        <h3 class="subHeaders">Resetting</h3>
+          <p class="guide">Press the reset button. Scores and preferences can be reset individually</p>
+      <img class="gifs" src="resetting.gif" alt="resetting gif">
+    </div>
+  </div>
+</section>
+<section id=formSection>
+  <div id="testBox">
+    <form class="forms" action="" method="POST" id="settingForm">
+      <div id="accordion" class="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button  id="location" type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Preferences
+              </button>
+            </h5> 
+          </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div id="preferences" class="card-body">
+                <div class="question"><h4>Location</h4>
+                  <div class="rating">
+                    <input type="radio" class="userSettings" name="setting1" value="5" id="locationSet5" required><label for="locationSet5">☆</label> 
+                    <input type="radio" class="userSettings" name="setting1" value="4" id="locationSet4" ><label for="locationSet4">☆</label> 
+                    <input type="radio" class="userSettings" name="setting1" value="3" id="locationSet3" ><label for="locationSet3">☆</label> 
+                    <input type="radio" class="userSettings" name="setting1" value="2" id="locationSet2" ><label for="locationSet2">☆</label> 
+                    <input type="radio" class="userSettings" name="setting1" value="1" id="locationSet1" ><label for="locationSet1">☆</label> 
+                  </div> 
+                </div>
+                <div class="question"><h4>Front Garden</h4>
+                  <div class="rating">
+                    <input type="radio" class="userSettings" name="setting2" value="5" id="frontGardenSet5" required><label for="frontGardenSet5">☆</label> 
+                    <input type="radio" class="userSettings" name="setting2" value="4" id="frontGardenSet4" required><label for="frontGardenSet4">☆</label> 
+                    <input type="radio" class="userSettings" name="setting2" value="3" id="frontGardenSet3" required><label for="frontGardenSet3">☆</label> 
+                    <input type="radio" class="userSettings" name="setting2" value="2" id="frontGardenSet2" required><label for="frontGardenSet2">☆</label> 
+                    <input type="radio" class="userSettings" name="setting2" value="1" id="frontGardenSet1" required><label for="frontGardenSet1">☆</label> 
+                  </div> 
+                </div>
+                <div class="question"><h4>Back Garden</h4>
+                  <div class="rating">
+                    <input type="radio" class="userSettings" name="setting3" value="5" id="backGardenSet5" required><label for="backGardenSet5">☆</label> 
+                    <input type="radio" class="userSettings" name="setting3" value="4" id="backGardenSet4" required><label for="backGardenSet4">☆</label> 
+                    <input type="radio" class="userSettings" name="setting3" value="3" id="backGardenSet3" required><label for="backGardenSet3">☆</label> 
+                    <input type="radio" class="userSettings" name="setting3" value="2" id="backGardenSet2" required><label for="backGardenSet2">☆</label> 
+                    <input type="radio" class="userSettings" name="setting3" value="1" id="backGardenSet1" required><label for="backGardenSet1">☆</label> 
+                  </div>
+                </div>
+                <div class="question"><h4>Lounge</h4>
+                  <div class="rating">
+                    <input type="radio" class="userSettings" name="setting4" value="5" id="loungeSet5" required><label for="loungeSet5">☆</label> 
+                    <input type="radio" class="userSettings" name="setting4" value="4" id="loungeSet4" required><label for="loungeSet4">☆</label> 
+                    <input type="radio" class="userSettings" name="setting4" value="3" id="loungeSet3" required><label for="loungeSet3">☆</label> 
+                    <input type="radio" class="userSettings" name="setting4" value="2" id="loungeSet2" required><label for="loungeSet2">☆</label> 
+                    <input type="radio" class="userSettings" name="setting4" value="1" id="loungeSet1" required><label for="loungeSet1">☆</label> 
+                  </div> 
+                </div>
+                <div class="question"><h4>Kitchen</h4>
+                  <div class="rating">
+                    <input type="radio" class="userSettings" name="setting5" value="5" id="kitchenSet5" required><label for="kitchenSet5">☆</label> 
+                    <input type="radio" class="userSettings" name="setting5" value="4" id="kitchenSet4" required><label for="kitchenSet4">☆</label> 
+                    <input type="radio" class="userSettings" name="setting5" value="3" id="kitchenSet3" required><label for="kitchenSet3">☆</label> 
+                    <input type="radio" class="userSettings" name="setting5" value="2" id="kitchenSet2" required><label for="kitchenSet2">☆</label> 
+                    <input type="radio" class="userSettings" name="setting5" value="1" id="kitchenSet1" required><label for="kitchenSet1">☆</label> 
+                  </div> 
+                </div>
+                <div class="question"><h4>Utility</h4>
+                  <div class="rating">
+                    <input type="radio" class="userSettings" name="setting6" value="5" id="utilitySet5" required><label for="utilitySet5">☆</label> 
+                    <input type="radio" class="userSettings" name="setting6" value="4" id="utilitySet4" required><label for="utilitySet4">☆</label> 
+                    <input type="radio" class="userSettings" name="setting6" value="3" id="utilitySet3" required><label for="utilitySet3">☆</label> 
+                    <input type="radio" class="userSettings" name="setting6" value="2" id="utilitySet2" required><label for="utilitySet2">☆</label> 
+                    <input type="radio" class="userSettings" name="setting6" value="1" id="utilitySet1" required><label for="utilitySet1">☆</label> 
+                  </div> 
+                </div>
+                <div class="question"><h4>WC</h4>
+                  <div class="rating">
+                    <input type="radio" class="userSettings" name="setting7" value="5" id="wcSet5" required><label for="wcSet5">☆</label> 
+                    <input type="radio" class="userSettings" name="setting7" value="4" id="wcSet4" required><label for="wcSet4">☆</label> 
+                    <input type="radio" class="userSettings" name="setting7" value="3" id="wcSet3" required><label for="wcSet3">☆</label> 
+                    <input type="radio" class="userSettings" name="setting7" value="2" id="wcSet2" required><label for="wcSet2">☆</label> 
+                    <input type="radio" class="userSettings" name="setting7" value="1" id="wcSet1" required><label for="wcSet1">☆</label> 
+                  </div> 
+                </div>
+                <div class="question"><h4>Bathroom</h4>
+                  <div class="rating">
+                    <input type="radio" class="userSettings" name="setting8" value="5" id="bathroomSet5" required><label for="bathroomSet5">☆</label> 
+                    <input type="radio" class="userSettings" name="setting8" value="4" id="bathroomSet4" required><label for="bathroomSet4">☆</label> 
+                    <input type="radio" class="userSettings" name="setting8" value="3" id="bathroomSet3" required><label for="bathroomSet3">☆</label> 
+                    <input type="radio" class="userSettings" name="setting8" value="2" id="bathroomSet2" required><label for="bathroomSet2">☆</label> 
+                    <input type="radio" class="userSettings" name="setting8" value="1" id="bathroomSet1" required><label for="bathroomSet1">☆</label> 
+                  </div> 
+                </div>
+                <div class="question"><h4>Bedroom</h4>
+                  <div class="rating">
+                    <input type="radio" class="userSettings" name="setting9" value="5" id="bedroomSet5" required><label for="bedroomSet5">☆</label> 
+                    <input type="radio" class="userSettings" name="setting9" value="4" id="bedroomSet4" required><label for="bedroomSet4">☆</label> 
+                    <input type="radio" class="userSettings" name="setting9" value="3" id="bedroomSet3" required><label for="bedroomSet3">☆</label> 
+                    <input type="radio" class="userSettings" name="setting9" value="2" id="bedroomSet2" required><label for="bedroomSet2">☆</label> 
+                    <input type="radio" class="userSettings" name="setting9" value="1" id="bedroomSet1" required><label for="bedroomSet1">☆</label> 
+                  </div> 
+                </div>
+                <div class="question"><h4>Ensuite</h4>
+                  <div class="rating">
+                    <input type="radio" class="userSettings" name="setting10" value="5" id="ensuiteSet5" required><label for="ensuiteSet5">☆</label> 
+                    <input type="radio" class="userSettings" name="setting10" value="4" id="ensuiteSet4" required><label for="ensuiteSet4">☆</label> 
+                    <input type="radio" class="userSettings" name="setting10" value="3" id="ensuiteSet3" required><label for="ensuiteSet3">☆</label> 
+                    <input type="radio" class="userSettings" name="setting10" value="2" id="ensuiteSet2" required><label for="ensuiteSet2">☆</label> 
+                    <input type="radio" class="userSettings" name="setting10" value="1" id="ensuiteSet1" required><label for="ensuiteSet1">☆</label> 
+                  </div> 
+                </div>
+                <div class="question"><h4>Game Room</h4>
+                  <div class="rating">
+                    <input type="radio" class="userSettings" name="setting11" value="5" id="gameRoomSet5" required><label for="gameRoomSet5">☆</label> 
+                    <input type="radio" class="userSettings" name="setting11" value="4" id="gameRoomSet4" required><label for="gameRoomSet4">☆</label> 
+                    <input type="radio" class="userSettings" name="setting11" value="3" id="gameRoomSet3" required><label for="gameRoomSet3">☆</label> 
+                    <input type="radio" class="userSettings" name="setting11" value="2" id="gameRoomSet2" required><label for="gameRoomSet2">☆</label> 
+                    <input type="radio" class="userSettings" name="setting11" value="1" id="gameRoomSet1" required><label for="gameRoomSet1">☆</label> 
+                  </div> 
+                </div>
+                <div class="question"><h4>Office 1</h4>
+                  <div class="rating">
+                    <input type="radio" class="userSettings" name="setting12" value="5" id="office1Set5" required><label for="office1Set5">☆</label> 
+                    <input type="radio" class="userSettings" name="setting12" value="4" id="office1Set4" required><label for="office1Set4">☆</label> 
+                    <input type="radio" class="userSettings" name="setting12" value="3" id="office1Set3" required><label for="office1Set3">☆</label> 
+                    <input type="radio" class="userSettings" name="setting12" value="2" id="office1Set2" required><label for="office1Set2">☆</label> 
+                    <input type="radio" class="userSettings" name="setting12" value="1" id="office1Set1" required><label for="office1Set1">☆</label> 
+                  </div> 
+                </div>
+                <div class="question"><h4>Office 2</h4>
+                  <div class="rating">
+                    <input type="radio" class="userSettings" name="setting13" value="5" id="office2Set5" required><label for="office2Set5">☆</label> 
+                    <input type="radio" class="userSettings" name="setting13" value="4" id="office2Set4" required><label for="office2Set4">☆</label> 
+                    <input type="radio" class="userSettings" name="setting13" value="3" id="office2Set3" required><label for="office2Set3">☆</label> 
+                    <input type="radio" class="userSettings" name="setting13" value="2" id="office2Set2" required><label for="office2Set2">☆</label> 
+                    <input type="radio" class="userSettings" name="setting13" value="1" id="office2Set1" required><label for="office2Set1">☆</label> 
+                  </div> 
+                </div>
+                  <input type="button" class="myButton" id="settingButton" value="Submit">
+                  <input type="button" class="myButton" id="settingButtonReset" value="Reset">
+                </div>
+    </form>
+</div>
+  <form class="forms" action="" method="POST" id="scoreForm">
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button  id="location" type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            Location
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+          <div class="question"><h4>Road Pollution</h4>
+            <div class="rating">
+              <input type="radio" class="userRatings" name="locRating1" value="5" id="locPollution1" required><label for="locPollution1">☆</label> 
+              <input type="radio" class="userRatings" name="locRating1" value="4" id="locPollution2" required><label for="locPollution2">☆</label> 
+              <input type="radio" class="userRatings" name="locRating1" value="3" id="locPollution3" required><label for="locPollution3">☆</label> 
+              <input type="radio" class="userRatings" name="locRating1" value="2" id="locPollution4" required><label for="locPollution4">☆</label> 
+              <input type="radio" class="userRatings" name="locRating1" value="1" id="locPollution5" required><label for="locPollution5">☆</label> 
+            </div> 
+            <p class="key">1 = Lots : 5 = Little</p>
+          </div>
+          <div class="question"><h4>Parents</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="locRating2" value="5" id="locParents5" required><label for="locParents5">☆</label> 
+              <input type="radio" class="userRatings" name="locRating2" value="4" id="locParents4" required><label for="locParents4">☆</label> 
+              <input type="radio" class="userRatings" name="locRating2" value="3" id="locParents3" required><label for="locParents3">☆</label> 
+              <input type="radio" class="userRatings" name="locRating2" value="2" id="locParents2" required><label for="locParents2">☆</label> 
+              <input type="radio" class="userRatings" name="locRating2" value="1" id="locParents1" required><label for="locParents1">☆</label>
+            </div> 
+            <p class="key">1 = Far : 5 = Close</p>
+          </div>
+          <div class="question"><h4>Schools</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="locRating3" value="5" id="locSchool5" required><label for="locSchool5">☆</label> 
+              <input type="radio" class="userRatings" name="locRating3" value="4" id="locSchool4" required><label for="locSchool4">☆</label> 
+              <input type="radio" class="userRatings" name="locRating3" value="3" id="locSchool3" required><label for="locSchool3">☆</label> 
+              <input type="radio" class="userRatings" name="locRating3" value="2" id="locSchool2" required><label for="locSchool2">☆</label> 
+              <input type="radio" class="userRatings" name="locRating3" value="1" id="locSchool1" required><label for="locSchool1">☆</label>
+            </div> 
+            <p class="key">1 = Close : 5 = Far</p>
+          </div>
+          <div class="question"><h4>Amenities</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="locRating4" value="5" id="locAmenities5" required><label for="locAmenities5">☆</label> 
+              <input type="radio" class="userRatings" name="locRating4" value="4" id="locAmenities4" required><label for="locAmenities4">☆</label> 
+              <input type="radio" class="userRatings" name="locRating4" value="3" id="locAmenities3" required><label for="locAmenities3">☆</label> 
+              <input type="radio" class="userRatings" name="locRating4" value="2" id="locAmenities2" required><label for="locAmenities2">☆</label> 
+              <input type="radio" class="userRatings" name="locRating4" value="1" id="locAmenities1" required><label for="locAmenities1">☆</label>
+            </div> 
+            <p class="key">1 = Far : 5 = Close</p>
+          </div>
+          <div class="question"><h4>Light Pollution</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="locRating5" value="5" id="locLight5" required><label for="locLight5">☆</label> 
+              <input type="radio" class="userRatings" name="locRating5" value="4" id="locLight4" required><label for="locLight4">☆</label> 
+              <input type="radio" class="userRatings" name="locRating5" value="3" id="locLight3" required><label for="locLight3">☆</label> 
+              <input type="radio" class="userRatings" name="locRating5" value="2" id="locLight2" required><label for="locLight2">☆</label> 
+              <input type="radio" class="userRatings" name="locRating5" value="1" id="locLight1" required><label for="locLight1">☆</label>
+            </div> 
+            <p class="key">1 = Lots : 5 = None</p>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Front Garden
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+          <div class="question"><h4>Looks</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="frontRating1" value="5" id="frontLooks5" required><label for="frontLooks5">☆</label> 
+              <input type="radio" class="userRatings" name="frontRating1" value="4" id="frontLooks4" required><label for="frontLooks4">☆</label> 
+              <input type="radio" class="userRatings" name="frontRating1" value="3" id="frontLooks3" required><label for="frontLooks3">☆</label> 
+              <input type="radio" class="userRatings" name="frontRating1" value="2" id="frontLooks2" required><label for="frontLooks2">☆</label> 
+              <input type="radio" class="userRatings" name="frontRating1" value="1" id="frontLooks1" required><label for="frontLooks1">☆</label>
+            </div> 
+            <p class="key">1 = Bad : 5 = Good</p> 
+          </div>
+          <div class="question"><h4>Privacy</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="frontRating2" value="5" id="frontPrivacy5" required><label for="frontPrivacy5">☆</label> 
+              <input type="radio" class="userRatings" name="frontRating2" value="4" id="frontPrivacy4" required><label for="frontPrivacy4">☆</label> 
+              <input type="radio" class="userRatings" name="frontRating2" value="3" id="frontPrivacy3" required><label for="frontPrivacy3">☆</label> 
+              <input type="radio" class="userRatings" name="frontRating2" value="2" id="frontPrivacy2" required><label for="frontPrivacy2">☆</label> 
+              <input type="radio" class="userRatings" name="frontRating2" value="1" id="frontPrivacy1" required><label for="frontPrivacy1">☆</label>
+            </div> 
+            <p class="key">1 = None : 5 = Lots</p> 
+            </div>
+          <div class="question"><h4>Parking</h4>
+            <div class="yesNoRating"> 
+              <input type="radio" class="userRatings" name="frontRating3" value="5" id="parking1" required><label class="yesNoLabel"for="parking1">👍</label> 
+                <input type="radio" class="userRatings" name="frontRating3" value="1" id="parking2" required><label class="yesNoLabel" for="parking2">👎</label> 
+            </div> 
+          </div>
+          <div class="question"><h4>Grass</h4>
+            <div class="yesNoRating"> 
+              <input type="radio" class="userRatings" name="frontRating4" value="5" id="grass1" required><label class="yesNoLabel"for="grass1">👍</label> 
+              <input type="radio" class="userRatings" name="frontRating4" value="1" id="grass2" required><label class="yesNoLabel" for="grass2">👎</label> 
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingFour">
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Back Garden
+          </button>
+        </h5>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+        <div class="card-body">
+          <div class="question"><h4>Size</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="backGardenRating1" value="5" id="backGardenSize5" required><label for="backGardenSize5">☆</label> 
+              <input type="radio" class="userRatings" name="backGardenRating1" value="4" id="backGardenSize4" required><label for="backGardenSize4">☆</label> 
+              <input type="radio" class="userRatings" name="backGardenRating1" value="3" id="backGardenSize3" required><label for="backGardenSize3">☆</label> 
+              <input type="radio" class="userRatings" name="backGardenRating1" value="2" id="backGardenSize2" required><label for="backGardenSize2">☆</label> 
+              <input type="radio" class="userRatings" name="backGardenRating1" value="1" id="backGardenSize1" required><label for="backGardenSize1">☆</label>
+            </div> 
+            <p class="key">1 = Small : 5 = Large</p> 
+          </div>
+          <div class="question"><h4>Privacy</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="backGardenRating2" value="5" id="backGardenPrivacy5" required><label for="backGardenPrivacy5">☆</label> 
+              <input type="radio" class="userRatings" name="backGardenRating2" value="4" id="backGardenPrivacy4" required><label for="backGardenPrivacy4">☆</label> 
+              <input type="radio" class="userRatings" name="backGardenRating2" value="3" id="backGardenPrivacy3" required><label for="backGardenPrivacy3">☆</label> 
+              <input type="radio" class="userRatings" name="backGardenRating2" value="2" id="backGardenPrivacy2" required><label for="backGardenPrivacy2">☆</label> 
+              <input type="radio" class="userRatings" name="backGardenRating2" value="1" id="backGardenPrivacy1" required><label for="backGardenPrivacy1">☆</label>
+            </div> 
+            <p class="key">1 = None : 5 = Lots</p> 
+          </div>
+          <div class="question"><h4>Landscape</h4>
+            <div class="yesNoRating"> 
+              <input type="radio" class="userRatings" name="backGardenRating3" value="5" id="backGardenLandscape1" required><label class="yesNoLabel"for="backGardenLandscape1">👍</label> 
+              <input type="radio" class="userRatings" name="backGardenRating3" value="1" id="backGardenLandscape2" required><label class="yesNoLabel" for="backGardenLandscape2">👎</label> 
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingFive">
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Lounge
+          </button>
+        </h5>
+      </div>
+      <div id="collapseFive" class="collapse" aria-labelledby="heading" data-parent="#accordion">
+        <div class="card-body">
+          <div class="question"><h4>Size</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="loungeRating1" value="5" id="loungeSize5" required><label for="loungeSize5">☆</label> 
+              <input type="radio" class="userRatings" name="loungeRating1" value="4" id="loungeSize4" required><label for="loungeSize4">☆</label> 
+              <input type="radio" class="userRatings" name="loungeRating1" value="3" id="loungeSize3" required><label for="loungeSize3">☆</label> 
+              <input type="radio" class="userRatings" name="loungeRating1" value="2" id="loungeSize2" required><label for="loungeSize2">☆</label> 
+              <input type="radio" class="userRatings" name="loungeRating1" value="1" id="loungeSize1" required><label for="loungeSize1">☆</label>
+            </div> 
+            <p class="key">1 = Small : 5 = Large</p> 
+            </div>
+            <div class="question"><h4>Windows</h4>
+              <div class="rating"> 
+                <input type="radio" class="userRatings" name="loungeRating2" value="5" id="loungeWindows5" required><label for="loungeWindows5">☆</label> 
+                <input type="radio" class="userRatings" name="loungeRating2" value="4" id="loungeWindows4" required><label for="loungeWindows4">☆</label> 
+                <input type="radio" class="userRatings" name="loungeRating2" value="3" id="loungeWindows3" required><label for="loungeWindows3">☆</label> 
+                <input type="radio" class="userRatings" name="loungeRating2" value="2" id="loungeWindows2" required><label for="loungeWindows2">☆</label> 
+                <input type="radio" class="userRatings" name="loungeRating2" value="1" id="loungeWindows1" required><label for="loungeWindows1">☆</label>
+              </div> 
+              <p class="key">1 = Bad : 5 = Good </p> 
+            </div>
+            <div class="question"><h4>TV Space</h4>
+              <div class="yesNoRating"> 
+                <input type="radio" class="userRatings" name="lounge#Rating3" value="5" id="loungeTV1" required><label class="yesNoLabel"for="loungeTV1">👍</label> 
+                <input type="radio" class="userRatings" name="lounge#Rating3" value="1" id="loungeTV2" required><label class="yesNoLabel" for="loungeTV2">👎</label> 
+              </div> 
+            </div>
+            <div class="question"><h4>Sofa Space</h4>
+            <div class="yesNoRating"> 
+              <input type="radio" class="userRatings" name="lounge#Rating4" value="5" id="loungeSofa1" required><label class="yesNoLabel"for="loungeSofa1">👍</label> 
+              <input type="radio" class="userRatings" name="lounge#Rating4" value="1" id="loungeSofa2" required><label class="yesNoLabel" for="loungeSofa2">👎</label> 
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingSix">
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Kitchen
+          </button>
+        </h5>
+      </div>
+      <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+        <div class="card-body">
+          <div class="question"><h4>Size</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="kitchenRating1" value="5" id="kitchenSize5" required><label for="kitchenSize5">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating1" value="4" id="kitchenSize4" required><label for="kitchenSize4">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating1" value="3" id="kitchenSize3" required><label for="kitchenSize3">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating1" value="2" id="kitchenSize2" required><label for="kitchenSize2">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating1" value="1" id="kitchenSize1" required><label for="kitchenSize1">☆</label>
+            </div> 
+            <p class="key">1 = Small : 5 = Large</p> 
+          </div>
+          <div class="question"><h4>Windows</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="kitchenRating2" value="5" id="kitchenWindows5" required><label for="kitchenWindows5">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating2" value="4" id="kitchenWindows4" required><label for="kitchenWindows4">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating2" value="3" id="kitchenWindows3" required><label for="kitchenWindows3">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating2" value="2" id="kitchenWindows2" required><label for="kitchenWindows2">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating2" value="1" id="kitchenWindows1" required><label for="kitchenWindows1">☆</label>
+            </div> 
+            <p class="key">1 = Bad : 5 = Good </p> 
+          </div>
+          <div class="question"><h4>Counters</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="kitchenRating3" value="5" id="kitchenCounters5" required><label for="kitchenCounters5">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating3" value="4" id="kitchenCounters4" required><label for="kitchenCounters4">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating3" value="3" id="kitchenCounters3" required><label for="kitchenCounters3">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating3" value="2" id="kitchenCounters2" required><label for="kitchenCounters2">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating3" value="1" id="kitchenCounters1" required><label for="kitchenCounters1">☆</label>
+            </div> 
+            <p class="key">1 = None : 5 = Lots</p> 
+            </div>
+          <div class="question"><h4>Storage</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="kitchenRating4" value="5" id="kitchenStorage5" required><label for="kitchenStorage5">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating4" value="4" id="kitchenStorage4" required><label for="kitchenStorage4">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating4" value="3" id="kitchenStorage3" required><label for="kitchenStorage3">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating4" value="2" id="kitchenStorage2" required><label for="kitchenStorage2">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating4" value="1" id="kitchenStorage1" required><label for="kitchenStorage1">☆</label>
+            </div> 
+            <p class="key">1 = None : 5 = Lots</p> 
+          </div>
+          <div class="question"><h4>Sitting Area</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="kitchenRating5" value="5" id="kitchenSitting5" required><label for="kitchenSitting5">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating5" value="4" id="kitchenSitting4" required><label for="kitchenSitting4">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating5" value="3" id="kitchenSitting3" required><label for="kitchenSitting3">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating5" value="2" id="kitchenSitting2" required><label for="kitchenSitting2">☆</label> 
+              <input type="radio" class="userRatings" name="kitchenRating5" value="1" id="kitchenSitting1" required><label for="kitchenSitting1">☆</label>
+            </div> 
+            <p class="key">1 = None : 5 = Lots</p> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingSeven">
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          Utility
+          </button>
+        </h5>
+      </div>
+      <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+        <div class="card-body">
+          <div class="question"><h4>Size</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="utilityRating1" value="5" id="utilitySize5" required><label for="utilitySize5">☆</label> 
+              <input type="radio" class="userRatings" name="utilityRating1" value="4" id="utilitySize4" required><label for="utilitySize4">☆</label> 
+              <input type="radio" class="userRatings" name="utilityRating1" value="3" id="utilitySize3" required><label for="utilitySize3">☆</label> 
+              <input type="radio" class="userRatings" name="utilityRating1" value="2" id="utilitySize2" required><label for="utilitySize2">☆</label> 
+              <input type="radio" class="userRatings" name="utilityRating1" value="1" id="utilitySize1" required><label for="utilitySize1">☆</label>
+            </div> 
+            <p class="key">1 = Small : 5 = Large</p> 
+          </div>
+          <div class="question"><h4>Storage</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="utilityRating2" value="5" id="utilityStorage5" required><label for="utilityStorage5">☆</label> 
+              <input type="radio" class="userRatings" name="utilityRating2" value="4" id="utilityStorage4" required><label for="utilityStorage4">☆</label> 
+              <input type="radio" class="userRatings" name="utilityRating2" value="3" id="utilityStorage3" required><label for="utilityStorage3">☆</label> 
+              <input type="radio" class="userRatings" name="utilityRating2" value="2" id="utilityStorage2" required><label for="utilityStorage2">☆</label> 
+              <input type="radio" class="userRatings" name="utilityRating2" value="1" id="utilityStorage1" required><label for="utilityStorage1">☆</label>
+            </div> 
+            <p class="key">1 = None : 5 = Lots</p> 
+          </div>
+          <div class="question"><h4>Window</h4>
+            <div class="yesNoRating"> 
+              <input type="radio" class="userRatings" name="utilityRating3" value="5" id="utilityWindow1" required><label class="yesNoLabel"for="utilityWindow1">👍</label> 
+              <input type="radio" class="userRatings" name="utilityRating3" value="1" id="utilityWindow2" required><label class="yesNoLabel" for="utilityWindow2">👎</label> 
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingEight">
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+          WC
+          </button>
+        </h5>
+      </div>
+      <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+        <div class="card-body">
+          <div class="question"><h4>Size</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="wcRating1" value="5" id="wcSize5" required><label for="wcSize5">☆</label> 
+              <input type="radio" class="userRatings" name="wcRating1" value="4" id="wcSize4" required><label for="wcSize4">☆</label> 
+              <input type="radio" class="userRatings" name="wcRating1" value="3" id="wcSize3" required><label for="wcSize3">☆</label> 
+              <input type="radio" class="userRatings" name="wcRating1" value="2" id="wcSize2" required><label for="wcSize2">☆</label> 
+              <input type="radio" class="userRatings" name="wcRating1" value="1" id="wcSize1" required><label for="wcSize1">☆</label>
+            </div> 
+            <p class="key">1 = Small : 5 = Large</p> 
+          </div>
+        <div class="question"><h4>Window</h4>
+          <div class="yesNoRating"> 
+            <input type="radio" class="userRatings" name="wcRating2" value="5" id="wcWindow1" required><label class="yesNoLabel"for="wcWindow1">👍</label> 
+            <input type="radio" class="userRatings" name="wcRating2" value="1" id="wcWindow2" required><label class="yesNoLabel" for="wcWindow2">👎</label> 
+          </div> 
+        </div>    
+      </div>
+    </div>
+  </div>
+    <div class="card">
+      <div class="card-header" id="headingNine">
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+          Bathroom
+          </button>
+        </h5>
+      </div>
+      <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+        <div class="card-body">
+          <div class="question"><h4>Size</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="bathroomRating1" value="5" id="bathroomSize5" required><label for="bathroomSize5">☆</label> 
+              <input type="radio" class="userRatings" name="bathroomRating1" value="4" id="bathroomSize4" required><label for="bathroomSize4">☆</label> 
+              <input type="radio" class="userRatings" name="bathroomRating1" value="3" id="bathroomSize3" required><label for="bathroomSize3">☆</label> 
+              <input type="radio" class="userRatings" name="bathroomRating1" value="2" id="bathroomSize2" required><label for="bathroomSize2">☆</label> 
+              <input type="radio" class="userRatings" name="bathroomRating1" value="1" id="bathroomSize1" required><label for="bathroomSize1">☆</label>
+            </div> 
+            <p class="key">1 = Small : 5 = Large</p> 
+          </div>
+          <div class="question"><h4>Storage</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="bathroomRating2" value="5" id="bathroomStorage5" required><label for="bathroomStorage5">☆</label> 
+              <input type="radio" class="userRatings" name="bathroomRating2" value="4" id="bathroomStorage4" required><label for="bathroomStorage4">☆</label> 
+              <input type="radio" class="userRatings" name="bathroomRating2" value="3" id="bathroomStorage3" required><label for="bathroomStorage3">☆</label> 
+              <input type="radio" class="userRatings" name="bathroomRating2" value="2" id="bathroomStorage2" required><label for="bathroomStorage2">☆</label> 
+              <input type="radio" class="userRatings" name="bathroomRating2" value="1" id="bathroomStorage1" required><label for="bathroomStorage1">☆</label>
+            </div> 
+            <p class="key">1 = None : 5 = Lots</p> 
+          </div>
+          <div class="question"><h4>Windows</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="bathroomRating3" value="5" id="bathroomWindows5" required><label for="bathroomWindows5">☆</label> 
+              <input type="radio" class="userRatings" name="bathroomRating3" value="4" id="bathroomWindows4" required><label for="bathroomWindows4">☆</label> 
+              <input type="radio" class="userRatings" name="bathroomRating3" value="3" id="bathroomWindows3" required><label for="bathroomWindows3">☆</label> 
+              <input type="radio" class="userRatings" name="bathroomRating3" value="2" id="bathroomWindows2" required><label for="bathroomWindows2">☆</label> 
+              <input type="radio" class="userRatings" name="bathroomRating3" value="1" id="bathroomWindows1" required><label for="bathroomWindows1">☆</label>
+            </div> 
+            <p class="key">1 = Bad : 5 = Good</p> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTen">
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  Bedroom
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+        <div class="card-body">
+          <div class="question"><h4>Size</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="bedroomRating1" value="5" id="bedroomSize5" required><label for="bedroomSize5">☆</label> 
+              <input type="radio" class="userRatings" name="bedroomRating1" value="4" id="bedroomSize4" required><label for="bedroomSize4">☆</label> 
+              <input type="radio" class="userRatings" name="bedroomRating1" value="3" id="bedroomSize3" required><label for="bedroomSize3">☆</label> 
+              <input type="radio" class="userRatings" name="bedroomRating1" value="2" id="bedroomSize2" required><label for="bedroomSize2">☆</label> 
+              <input type="radio" class="userRatings" name="bedroomRating1" value="1" id="bedroomSize1" required><label for="bedroomSize1">☆</label>
+            </div> 
+            <p class="key">1 = Small : 5 = Large</p> 
+          </div>
+          <div class="question"><h4>Windows</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="bedroomRating2" value="5" id="bedroomWindows5" required><label for="bedroomWindows5">☆</label> 
+              <input type="radio" class="userRatings" name="bedroomRating2" value="4" id="bedroomWindows4" required><label for="bedroomWindows4">☆</label> 
+              <input type="radio" class="userRatings" name="bedroomRating2" value="3" id="bedroomWindows3" required><label for="bedroomWindows3">☆</label> 
+              <input type="radio" class="userRatings" name="bedroomRating2" value="2" id="bedroomWindows2" required><label for="bedroomWindows2">☆</label> 
+              <input type="radio" class="userRatings" name="bedroomRating2" value="1" id="bedroomWindows1" required><label for="bedroomWindows1">☆</label>
+            </div> 
+            <p class="key">1 = Bad : 5 = Good</p> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingEleven">
+        <h5 class="mb-0">
+          <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEleveheadingEleven" aria-expanded="false" aria-controls="collapseEleveheadingEleven">
+                  Ensuite
+          </button>
+        </h5>
+      </div>
+      <div id="collapseEleveheadingEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+        <div class="card-body">
+          <div class="question"><h4>Size</h4>
+            <div class="rating"> 
+              <input type="radio" class="userRatings" name="ensuiteRating1" value="5" id="ensuiteSize5" required><label for="ensuiteSize5">☆</label> 
+              <input type="radio" class="userRatings" name="ensuiteRating1" value="4" id="ensuiteSize4" required><label for="ensuiteSize4">☆</label> 
+              <input type="radio" class="userRatings" name="ensuiteRating1" value="3" id="ensuiteSize3" required><label for="ensuiteSize3">☆</label> 
+              <input type="radio" class="userRatings" name="ensuiteRating1" value="2" id="ensuiteSize2" required><label for="ensuiteSize2">☆</label> 
+              <input type="radio" class="userRatings" name="ensuiteRating1" value="1" id="ensuiteSize1" required><label for="ensuiteSize1">☆</label>
+            </div> 
+            <p class="key">1 = Small : 5 = Large</p> 
+          </div>
+          <div class="question"><h4>Window</h4>
+            <div class="yesNoRating"> 
+              <input type="radio" class="userRatings" name="ensuiteRating2" value="5" id="ensuiteWindow1" required><label class="yesNoLabel"for="ensuiteWindow1">👍</label> 
+              <input type="radio" class="userRatings" name="ensuiteRating2" value="1" id="ensuiteWindow2" required><label class="yesNoLabel" for="ensuiteWindow2">👎</label> 
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="card">
+        <div class="card-header" id="headingTwelve">
+          <h5 class="mb-0">
+            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwheadingTwelve" aria-expanded="false" aria-controls="collapseTwheadingTwelve">
+                  Game Room
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwheadingTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
+          <div class="card-body">
+            <div class="question"><h4>Size</h4>
+              <div class="rating"> 
+                <input type="radio" class="userRatings" name="gameRoomRating1" value="5" id="gameRoomSize5" required><label for="gameRoomSize5">☆</label> 
+                <input type="radio" class="userRatings" name="gameRoomRating1" value="4" id="gameRoomSize4" required><label for="gameRoomSize4">☆</label> 
+                <input type="radio" class="userRatings" name="gameRoomRating1" value="3" id="gameRoomSize3" required><label for="gameRoomSize3">☆</label> 
+                <input type="radio" class="userRatings" name="gameRoomRating1" value="2" id="gameRoomSize2" required><label for="gameRoomSize2">☆</label> 
+                <input type="radio" class="userRatings" name="gameRoomRating1" value="1" id="gameRoomSize1" required><label for="gameRoomSize1">☆</label>
+              </div> 
+              <p class="key">1 = Small : 5 = Large</h4> 
+            </div>
+            <div class="question"><h4>Windows</h4>
+              <div class="rating"> 
+                <input type="radio" class="userRatings" name="gameRoomRating2" value="5" id="gameRoomWindows5" required><label for="gameRoomWindows5">☆</label> 
+                <input type="radio" class="userRatings" name="gameRoomRating2" value="4" id="gameRoomWindows4" required><label for="gameRoomWindows4">☆</label> 
+                <input type="radio" class="userRatings" name="gameRoomRating2" value="3" id="gameRoomWindows3" required><label for="gameRoomWindows3">☆</label> 
+                <input type="radio" class="userRatings" name="gameRoomRating2" value="2" id="gameRoomWindows2" required><label for="gameRoomWindows2">☆</label> 
+                <input type="radio" class="userRatings" name="gameRoomRating2" value="1" id="gameRoomWindows1" required><label for="gameRoomWindows1">☆</label>
+              </div> 
+              <p class="key">1 = Bad : 5 = Good</p> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThirteen">
+          <h5 class="mb-0">
+            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                  Office One
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordion">
+          <div class="card-body">
+            <div class="question"><h4>Size</h4>
+              <div class="rating"> 
+                <input type="radio" class="userRatings" name="officeOneRating1" value="5" id="officeOneSize5" required><label for="officeOneSize5">☆</label> 
+                <input type="radio" class="userRatings" name="officeOneRating1" value="4" id="officeOneSize4" required><label for="officeOneSize4">☆</label> 
+                <input type="radio" class="userRatings" name="officeOneRating1" value="3" id="officeOneSize3" required><label for="officeOneSize3">☆</label> 
+                <input type="radio" class="userRatings" name="officeOneRating1" value="2" id="officeOneSize2" required><label for="officeOneSize2">☆</label> 
+                <input type="radio" class="userRatings" name="officeOneRating1" value="1" id="officeOneSize1" required><label for="officeOneSize1">☆</label>
+              </div> 
+              <p class="key">1 = Small : 5 = Large</p> 
+            </div>
+            <div class="question"><h4>Windows</h4>
+              <div class="rating"> 
+                <input type="radio" class="userRatings" name="officeOneRating2" value="5" id="officeOneWindows5" required><label for="officeOneWindows5">☆</label> 
+                <input type="radio" class="userRatings" name="officeOneRating2" value="4" id="officeOneWindows4" required><label for="officeOneWindows4">☆</label> 
+                <input type="radio" class="userRatings" name="officeOneRating2" value="3" id="officeOneWindows3" required><label for="officeOneWindows3">☆</label> 
+                <input type="radio" class="userRatings" name="officeOneRating2" value="2" id="officeOneWindows2" required><label for="officeOneWindows2">☆</label> 
+                <input type="radio" class="userRatings" name="officeOneRating2" value="1" id="officeOneWindows1" required><label for="officeOneWindows1">☆</label>
+              </div> 
+              <p class="key">1 = Bad : 5 = Good</p> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFourteen">
+          <h5 class="mb-0">
+            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                  Office Two
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordion">
+          <div class="card-body">
+            <div class="question"><h4>Size</h4>
+              <div class="rating"> 
+                <input type="radio" class="userRatings" name="officeTwoRating1" value="5" id="officeTwoSize5" required><label for="officeTwoSize5">☆</label> 
+                <input type="radio" class="userRatings" name="officeTwoRating1" value="4" id="officeTwoSize4" required><label for="officeTwoSize4">☆</label> 
+                <input type="radio" class="userRatings" name="officeTwoRating1" value="3" id="officeTwoSize3" required><label for="officeTwoSize3">☆</label> 
+                <input type="radio" class="userRatings" name="officeTwoRating1" value="2" id="officeTwoSize2" required><label for="officeTwoSize2">☆</label> 
+                <input type="radio" class="userRatings" name="officeTwoRating1" value="1" id="officeTwoSize1" required><label for="officeTwoSize1">☆</label>
+              </div>
+              <p class="key">1 = Small : 5 = Large</p> 
+            </div>
+            <div class="question"><h4>Windows</h4>
+              <div class="rating"> 
+                <input type="radio" class="userRatings" name="officeTwoRating2" value="5" id="officeTwoWindows5" required><label for="officeTwoWindows5">☆</label> 
+                <input type="radio" class="userRatings" name="officeTwoRating2" value="4" id="officeTwoWindows4" required><label for="officeTwoWindows4">☆</label> 
+                <input type="radio" class="userRatings" name="officeTwoRating2" value="3" id="officeTwoWindows3" required><label for="officeTwoWindows3">☆</label> 
+                <input type="radio" class="userRatings" name="officeTwoRating2" value="2" id="officeTwoWindows2" required><label for="officeTwoWindows2">☆</label> 
+                <input type="radio" class="userRatings" name="officeTwoRating2" value="1" id="officeTwoWindows1" required><label for="officeTwoWindows1">☆</label>
+              </div> 
+              <p class="key">1 = Bad : 5 = Good</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </form>
+    <div id="buttonBox">
+      <input type="button" class="repButton" id="submitButton" value="Submit Scores">
+          <input type="button" class="repButton" id="resetButton" value="Reset Scores">
+        </div>
+        <form class="forms" action="" method="POST" id="scoreForm">
+          <div id="reportHeaderTop" class="card">
+            <div class="card-header" id="headingFifteen">
+              <h5 id="reportHeaderBox"class="mb-0">
+                <button type="button" id="reportHeader" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                REPORT
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordion">
+              <div class="card-body">
+                <ul>
+                  <li class="reportLinks">Location: scored <span id="scoredNumberLocation">#</span>%</li>
+                  <li class="reportLinks">Front Garden: scored <span id="scoredNumberFrontGarden">#</span>%</li>
+                  <li class="reportLinks">Back Garden: scored <span id="scoredNumberBackGarden">#</span>%</li>
+                  <li class="reportLinks">Lounge: scored <span id="scoredNumberLounge">#</span>%</li>
+                  <li class="reportLinks">Kitchen: scored <span id="scoredNumberKitchen">#</span>%</li>
+                  <li class="reportLinks">Utility: scored <span id="scoredNumberUtility">#</span>%</li>
+                  <li class="reportLinks">WC: scored <span id="scoredNumberWC">#</span>%</li>
+                  <li class="reportLinks">Bathroom: scored <span id="scoredNumberBathroom">#</span>%</li>
+                  <li class="reportLinks">Bedroom: scored <span id="scoredNumberBedroom">#</span>%</li>
+                  <li class="reportLinks">Ensuite: scored <span id="scoredNumberEnsuite">#</span>%</li>
+                  <li class="reportLinks">Game Room: scored <span id="scoredNumberGameroom">#</span>%</li>
+                  <li class="reportLinks">Office One: scored <span id="scoredNumberOffice1">#</span>%</li>
+                  <li class="reportLinks">Office Two: scored <span id="scoredNumberOffice2">#</span>%</li> 
+                  <li class="reportLinks">Based on your preferences this house is scored an overall of <span id="houseTotalPercent"> # </span>%</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+  </section>
+          
+
+</div>
+</div>
+
+            <script src="app.js"></script>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</body>
+</html>
